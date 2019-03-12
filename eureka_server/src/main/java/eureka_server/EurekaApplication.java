@@ -8,5 +8,13 @@ package eureka_server;/*
  * zongtong           2019/3/3 下午5:38           v1.0.0
  */
 
-public class EurekaApplication {
+
+
+
+@SpringBootApplication
+@EnableEurekaServer
+public class EurekaApplication  {
+    public static void main(String[] args) {
+        new SpringApplicationBuilder(EurekaApplication.class).web(true).run(args);
+    }
 }
